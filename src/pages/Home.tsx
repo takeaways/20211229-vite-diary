@@ -26,10 +26,17 @@ const Home = ({ presenter }: Props) => {
     [presenter],
   );
 
+  const onEditDiary = useCallback(
+    (content: Content) => {
+      presenter.edit(content, setDiaries);
+    },
+    [presenter],
+  );
+
   return (
     <div className="Home">
       <Editor onSubmit={onCreateNewDiary} />
-      <DiaryList items={diaries} onDelete={onDeleteDiary} />
+      <DiaryList items={diaries} onDelete={onDeleteDiary} onEdit={onEditDiary} />
     </div>
   );
 };

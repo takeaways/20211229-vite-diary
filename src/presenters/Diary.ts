@@ -22,6 +22,21 @@ class DiaryPresenter<Item extends Content> {
     this.state = this.state.filter((it) => it.id !== item.id);
     updator(this.state);
   }
+
+  edit(item: Item, updator: React.Dispatch<Item[]>) {
+    this.state = this.state.map(this.itemEditHeler(item));
+    updator(this.state);
+  }
+
+  private itemEditHeler(editedItem: Item) {
+    return (item: Item) => {
+      if (item.id !== editedItem.id) return item;
+      return {
+        ...item,
+        ...editedItem,
+      };
+    };
+  }
 }
 
 export default DiaryPresenter;
