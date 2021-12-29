@@ -1,0 +1,37 @@
+.Editor{
+  border: 1px solid gray;
+  text-align: center;
+  padding: 20px;
+}
+
+.Editor .title{
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+.Editor input,
+.Editor textarea{
+  
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding:10px;
+}
+
+.Editor textarea{
+  height: 150px;
+  resize: vertical;
+}
+
+.Editor select{
+  width: 300px;
+  padding:10px;
+  margin-bottom:20px;
+}
+
+.Editor button{
+  width: 100%;
+  max-width: 500px;
+  padding:10px;
+  cursor: pointer;
+}
