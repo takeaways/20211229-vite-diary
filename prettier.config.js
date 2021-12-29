@@ -4,7 +4,14 @@ module.exports = {
   trailingComma: "all",
   // "singleQuote": true,
   semi: true,
-  importOrder: ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  importOrder: [
+    "^@core/(.*)$",
+    "^app/(.*)$",
+    "^pages/(.*)$",
+    "^components/(.*)$",
+    "^utils/(.*)$",
+    "^[./]",
+  ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };
