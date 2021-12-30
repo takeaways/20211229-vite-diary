@@ -1,16 +1,15 @@
-import React, { memo, useRef } from "react";
-import { Content } from "types";
+import React, { memo, useContext, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
+
+import { ItemHandlerContext } from "pages/Home";
 
 import { toast } from "components/ToastRoot";
 
 import "./Editor.css";
 
-interface Props {
-  onSubmit: (content: Content) => void;
-}
+const Editor = () => {
+  const { onSubmit } = useContext(ItemHandlerContext);
 
-const Editor = ({ onSubmit }: Props) => {
   const formRef = useRef<HTMLFormElement>(null);
   const authorRef = useRef<HTMLInputElement>(null);
   const contentRef = useRef<HTMLTextAreaElement>(null);
@@ -36,7 +35,7 @@ const Editor = ({ onSubmit }: Props) => {
       return toast.error("내용을 5글자 이상 입력해 주세요!");
     }
 
-    onSubmit({
+    onSubmit?.({
       id: uuidv4(),
       author,
       content,

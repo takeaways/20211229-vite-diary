@@ -1,5 +1,7 @@
-import { memo, useRef, useState } from "react";
+import { memo, useContext, useRef, useState } from "react";
 import { Content } from "types";
+
+import { ItemHandlerContext } from "pages/Home";
 
 import { toast } from "components/ToastRoot";
 
@@ -7,11 +9,10 @@ import "./DiaryListItem.css";
 
 interface Props {
   diary: Content;
-  onDelete?: (diary: Content) => void;
-  onEdit?: (diary: Content) => void;
 }
-const DiaryListItem = ({ diary, onDelete, onEdit }: Props) => {
+const DiaryListItem = ({ diary }: Props) => {
   const { author, emotion, created_at, content } = diary;
+  const { onDelete, onEdit } = useContext(ItemHandlerContext);
 
   const [isEdit, setIsEdit] = useState(false);
   const onToggleIsEdit = () => {

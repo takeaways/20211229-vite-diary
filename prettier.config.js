@@ -7,8 +7,10 @@ module.exports = {
   importOrder: [
     "^@core/(.*)$",
     "^app/(.*)$",
+    "^presenters/(.*)$",
     "^pages/(.*)$",
     "^components/(.*)$",
+    "^types/(.*)$",
     "^utils/(.*)$",
     "^[./]",
   ],

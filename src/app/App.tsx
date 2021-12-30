@@ -1,6 +1,7 @@
-import DiaryPresenter from "presenters/Diary";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Content } from "types";
+
+import DiaryPresenter from "presenters/Diary";
 
 import Home from "pages/Home";
 

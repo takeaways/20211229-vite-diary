@@ -28,6 +28,18 @@ class DiaryPresenter<Item extends Content> {
     updator(this.state);
   }
 
+  getItemAnalysis() {
+    const good = this.state.filter((it) => Number(it.emotion) >= 3).length;
+    const bad = this.state.length - good;
+    const goodRatio = good / this.state.length / 100;
+    console.log("calll");
+    return {
+      good,
+      bad,
+      goodRatio,
+    };
+  }
+
   private itemEditHeler(editedItem: Item) {
     return (item: Item) => {
       if (item.id !== editedItem.id) return item;
