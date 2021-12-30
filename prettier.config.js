@@ -10,6 +10,7 @@ module.exports = {
     "^presenters/(.*)$",
     "^pages/(.*)$",
     "^components/(.*)$",
+    "^constant/(.*)$",
     "^types/(.*)$",
     "^utils/(.*)$",
     "^[./]",

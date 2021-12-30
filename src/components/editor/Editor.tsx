@@ -1,4 +1,5 @@
 import React, { memo, useContext, useRef } from "react";
+import { Content } from "types";
 import { v4 as uuidv4 } from "uuid";
 
 import { ItemHandlerContext } from "pages/Home";

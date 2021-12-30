@@ -12,6 +12,6 @@ const genAlias = (aliases: Array<string>) =>
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: genAlias(["utils", "components", "pages", "app", "types", "presenters"]),
+    alias: genAlias(["constant", "utils", "components", "pages", "app", "types", "presenters"]),
   },
 });

@@ -5,3 +5,7 @@ export const refExistCheckHeler = <T extends HTMLElement>(...elements: React.Ref
   }
   return true;
 };
+
+export const getDateHelper = (date: Date) => {
+  return date.toLocaleDateString().replace(/\.\s/g, "-").slice(0, -1);
+};
