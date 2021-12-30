@@ -1,5 +1,5 @@
 const Edit = () => {
-  return <div>Edit Edit</div>;
+  return <h1>edit</h1>;
 };
 
 export default Edit;

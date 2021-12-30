@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap');
+
 *{
   padding: 0;
   margin:0;
@@ -12,6 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* app padding */
   padding:20px;
+  background-color: dodgerblue;
+  color:white;
+  font-size: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Yeon Sung', cursive;
 }
 
 code {
